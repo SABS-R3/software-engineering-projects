@@ -20,9 +20,9 @@ keypoints:
 
 The field of Pharmokinetics (PK) provides a quantitative basis for describing the 
 delivery of a drug to a patient, the diffusion of that drug through the plasma/body 
-tissue, and the subsequent clearence of the drug from the patient's system. PK is used 
+tissue, and the subsequent clearance of the drug from the patient's system. PK is used 
 to ensure that there is sufficient concentration of the drug to maintain the required 
-effecicy of the drug, while ensuring that the concentration levels remain below the 
+efficacy of the drug, while ensuring that the concentration levels remain below the 
 toxic threshold (See Fig 1). Pharmokinetic (PK) models are often combined with 
 Pharmodynamic (PD) models, which model the positive effects of the drug, such as the 
 binding of a drug to the biological target, and/or undesirable side effects, to form a 
@@ -38,7 +38,7 @@ PK enables the following processes to be quantified:
 - Metabolism
 - Excretion
 
-These are often referred to as ADME, and taken together discribe the drug concentration 
+These are often referred to as ADME, and taken together describe the drug concentration 
 in the body when medicine is prescribed. These ADME processes are typically described by 
 zeroth-order or first-order *rate* reactions modelling the dynamics of the quantity of 
 drug $q$, with a given rate parameter $k$, for example:
@@ -52,18 +52,18 @@ $$
 $$
 
 The body itself is modelled as one or more *compartments*, each of which is defined as a 
-kinetically homogenous unit (these compartments do not relate to specific organs in the 
+kinetically homogeneous unit (these compartments do not relate to specific organs in the 
 body, unlike Physiologically based pharmacokinetic, PBPK, modeling). There is typically 
 a main *central* compartment into which the drug is administered and from which the drug 
-is excreated from the body, combined with zero or more *peripheral* compartments to 
+is excreted from the body, combined with zero or more *peripheral* compartments to 
 which the drug can be distributed to/from the central compartment (See Fig 2). Each 
 peripheral compartments is only connected to the central compartment.
 
 <img src="../fig/pk2.svg" alt="Fig 2" width="400"/>
 
-The following example PK model describes the two-compartment model shown diagramatically 
+The following example PK model describes the two-compartment model shown diagrammatically 
 in Fig 2. The time-dependent variables to be solved are the drug quantity in the central 
-and peripheral compartments, $q_c$ and $q_{p1}$ (units: [ng]) respectivly.
+and peripheral compartments, $q_c$ and $q_{p1}$ (units: [ng]) respectively.
 
 $$
 \frac{dq_c}{dt} = \text{Dose}(t) - \frac{q_c}{V_c} CL 
@@ -74,9 +74,9 @@ $$
 \frac{dq_{p1}}{dt} =  Q_{p1} \left ( \frac{q_c}{V_c} - \frac{q_{p1}}{V_{p1}} \right ).
 $$
 
-This model describes an *intravenious bolus* dosing protocol, with a linear clearence 
-from the central compartment (non-linear clearence processes are also possible, but not 
-considered here). The input paramters to the model are:
+This model describes an *intravenious bolus* dosing protocol, with a linear clearance 
+from the central compartment (non-linear clearance processes are also possible, but not 
+considered here). The input parameters to the model are:
 - The dose function $\text{Dose}(t)$, which could consist of instantaneous doses of $X$ 
   ng of the drug at one or more time points, or a steady application of $X$ ng per hour 
   over a given time period, or some combination.
@@ -130,7 +130,7 @@ where $k_a$ [/h] is the “absorption” rate for the s.c dosing.
 > - continuous integration (e.g. Github actions) for automatic testing and documentation 
 >   generation
 > - The ability to specify the form of the PK model, including the number of peripheral 
-    compartments, the type of dosing (bolus versus intravenious), and the dosing 
+    compartments, the type of dosing (bolus versus intravenous), and the dosing 
     protocol. 
 > - Users can specify the protocol independently from the model (e.g. be 
     able to solve a one and two compartment model for the same dosing protocol)
@@ -158,9 +158,11 @@ Modelling module in weeks 6-7, so take this time to become familiar with how to 
 ## Structure of the project days
 
 Each project team is free to organise their interaction according to what works best for 
-the group. The one scheduled activiy is a daily 20 min "stand-up" meeting (to be 
-scheduled) for each group with the module coordinator ([Martin 
-Robinson](mailto:martin.robinson@cs.ox.ac.uk)) and demonstrators.
+the group. Each group will have a breakout room to meet virtually and to plan their 
+project. Each group should create issues on their repository corresponding to individual 
+work items, and assign these members of the group. Each group should identify a workflow 
+that they will use to add code to the repository (e.g. one branch per issue, then a pull 
+request once the work is ready to add to the main branch).
 
 ## Hand-in
 
@@ -169,8 +171,8 @@ GitHub repository for each group. Your feedback and assessment for the software
 engineering module will be based on this repository: the source code contained within, 
 the generated documentation, and the content of the issues and pull requests. The source 
 code should be conform to a consistent style throughout, and docstrings & comments 
-should be approprate so that the code can be easily read and understood. The 
-docuementation should be sufficient so that a new user could easily use the library. The 
+should be appropriate so that the code can be easily read and understood. The 
+documentation should be sufficient so that a new user could easily use the library. The 
 issues and pull requests should be sufficiently detailed so that a developer could have 
 joined the project half-way through and get up-to-speed on the current state of 
 development and what needs to be done.
