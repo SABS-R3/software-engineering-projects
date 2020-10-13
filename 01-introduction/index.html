@@ -19,7 +19,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2020-10-05 10:46:40 +0100">
+    <meta http-equiv="last-modified" content="2020-10-13 10:35:45 +0100">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_search() -->
     <meta name="search-domain" value="">
@@ -247,9 +247,9 @@
 
 <p>The field of Pharmokinetics (PK) provides a quantitative basis for describing the 
 delivery of a drug to a patient, the diffusion of that drug through the plasma/body 
-tissue, and the subsequent clearence of the drug from the patient’s system. PK is used 
+tissue, and the subsequent clearance of the drug from the patient’s system. PK is used 
 to ensure that there is sufficient concentration of the drug to maintain the required 
-effecicy of the drug, while ensuring that the concentration levels remain below the 
+efficacy of the drug, while ensuring that the concentration levels remain below the 
 toxic threshold (See Fig 1). Pharmokinetic (PK) models are often combined with 
 Pharmodynamic (PD) models, which model the positive effects of the drug, such as the 
 binding of a drug to the biological target, and/or undesirable side effects, to form a 
@@ -267,7 +267,7 @@ neglecting the interaction with a PD model.</p>
   <li>Excretion</li>
 </ul>
 
-<p>These are often referred to as ADME, and taken together discribe the drug concentration 
+<p>These are often referred to as ADME, and taken together describe the drug concentration 
 in the body when medicine is prescribed. These ADME processes are typically described by 
 zeroth-order or first-order <em>rate</em> reactions modelling the dynamics of the quantity of 
 drug $q$, with a given rate parameter $k$, for example:</p>
@@ -277,27 +277,27 @@ drug $q$, with a given rate parameter $k$, for example:</p>
 \[\frac{dq}{dt} = -k q.\]
 
 <p>The body itself is modelled as one or more <em>compartments</em>, each of which is defined as a 
-kinetically homogenous unit (these compartments do not relate to specific organs in the 
+kinetically homogeneous unit (these compartments do not relate to specific organs in the 
 body, unlike Physiologically based pharmacokinetic, PBPK, modeling). There is typically 
 a main <em>central</em> compartment into which the drug is administered and from which the drug 
-is excreated from the body, combined with zero or more <em>peripheral</em> compartments to 
+is excreted from the body, combined with zero or more <em>peripheral</em> compartments to 
 which the drug can be distributed to/from the central compartment (See Fig 2). Each 
 peripheral compartments is only connected to the central compartment.</p>
 
 <p><img src="../fig/pk2.svg" alt="Fig 2" width="400" /></p>
 
-<p>The following example PK model describes the two-compartment model shown diagramatically 
+<p>The following example PK model describes the two-compartment model shown diagrammatically 
 in Fig 2. The time-dependent variables to be solved are the drug quantity in the central 
-and peripheral compartments, $q_c$ and $q_{p1}$ (units: [ng]) respectivly.</p>
+and peripheral compartments, $q_c$ and $q_{p1}$ (units: [ng]) respectively.</p>
 
 \[\frac{dq_c}{dt} = \text{Dose}(t) - \frac{q_c}{V_c} CL 
 - Q_{p1} \left ( \frac{q_c}{V_c} - \frac{q_{p1}}{V_{p1}} \right ),\]
 
 \[\frac{dq_{p1}}{dt} =  Q_{p1} \left ( \frac{q_c}{V_c} - \frac{q_{p1}}{V_{p1}} \right ).\]
 
-<p>This model describes an <em>intravenious bolus</em> dosing protocol, with a linear clearence 
-from the central compartment (non-linear clearence processes are also possible, but not 
-considered here). The input paramters to the model are:</p>
+<p>This model describes an <em>intravenious bolus</em> dosing protocol, with a linear clearance 
+from the central compartment (non-linear clearance processes are also possible, but not 
+considered here). The input parameters to the model are:</p>
 <ul>
   <li>The dose function $\text{Dose}(t)$, which could consist of instantaneous doses of $X$ 
 ng of the drug at one or more time points, or a steady application of $X$ ng per hour 
@@ -348,7 +348,7 @@ Your PK modelling library should ideally have the following functionality:</p>
     <li>continuous integration (e.g. Github actions) for automatic testing and documentation 
 generation</li>
     <li>The ability to specify the form of the PK model, including the number of peripheral 
-  compartments, the type of dosing (bolus versus intravenious), and the dosing 
+  compartments, the type of dosing (bolus versus intravenous), and the dosing 
   protocol.</li>
     <li>Users can specify the protocol independently from the model (e.g. be 
   able to solve a one and two compartment model for the same dosing protocol)</li>
@@ -377,9 +377,11 @@ Modelling module in weeks 6-7, so take this time to become familiar with how to 
 <h2 id="structure-of-the-project-days">Structure of the project days</h2>
 
 <p>Each project team is free to organise their interaction according to what works best for 
-the group. The one scheduled activiy is a daily 20 min “stand-up” meeting (to be 
-scheduled) for each group with the module coordinator (<a href="mailto:martin.robinson@cs.ox.ac.uk">Martin 
-Robinson</a>) and demonstrators.</p>
+the group. Each group will have a breakout room to meet virtually and to plan their 
+project. Each group should create issues on their repository corresponding to individual 
+work items, and assign these members of the group. Each group should identify a workflow 
+that they will use to add code to the repository (e.g. one branch per issue, then a pull 
+request once the work is ready to add to the main branch).</p>
 
 <h2 id="hand-in">Hand-in</h2>
 
@@ -388,8 +390,8 @@ GitHub repository for each group. Your feedback and assessment for the software
 engineering module will be based on this repository: the source code contained within, 
 the generated documentation, and the content of the issues and pull requests. The source 
 code should be conform to a consistent style throughout, and docstrings &amp; comments 
-should be approprate so that the code can be easily read and understood. The 
-docuementation should be sufficient so that a new user could easily use the library. The 
+should be appropriate so that the code can be easily read and understood. The 
+documentation should be sufficient so that a new user could easily use the library. The 
 issues and pull requests should be sufficiently detailed so that a developer could have 
 joined the project half-way through and get up-to-speed on the current state of 
 development and what needs to be done.</p>
