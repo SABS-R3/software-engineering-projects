@@ -19,7 +19,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2020-10-13 10:35:45 +0100">
+    <meta http-equiv="last-modified" content="2020-10-16 09:43:27 +0100">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_search() -->
     <meta name="search-domain" value="">
@@ -282,7 +282,7 @@ body, unlike Physiologically based pharmacokinetic, PBPK, modeling). There is ty
 a main <em>central</em> compartment into which the drug is administered and from which the drug 
 is excreted from the body, combined with zero or more <em>peripheral</em> compartments to 
 which the drug can be distributed to/from the central compartment (See Fig 2). Each 
-peripheral compartments is only connected to the central compartment.</p>
+peripheral compartment is only connected to the central compartment.</p>
 
 <p><img src="../fig/pk2.svg" alt="Fig 2" width="400" /></p>
 
@@ -295,7 +295,7 @@ and peripheral compartments, $q_c$ and $q_{p1}$ (units: [ng]) respectively.</p>
 
 \[\frac{dq_{p1}}{dt} =  Q_{p1} \left ( \frac{q_c}{V_c} - \frac{q_{p1}}{V_{p1}} \right ).\]
 
-<p>This model describes an <em>intravenious bolus</em> dosing protocol, with a linear clearance 
+<p>This model describes an <em>intravenous bolus</em> dosing protocol, with a linear clearance 
 from the central compartment (non-linear clearance processes are also possible, but not 
 considered here). The input parameters to the model are:</p>
 <ul>
@@ -348,8 +348,8 @@ Your PK modelling library should ideally have the following functionality:</p>
     <li>continuous integration (e.g. Github actions) for automatic testing and documentation 
 generation</li>
     <li>The ability to specify the form of the PK model, including the number of peripheral 
-  compartments, the type of dosing (bolus versus intravenous), and the dosing 
-  protocol.</li>
+  compartments, the type of dosing (intravenous bolus versus subcutaneous), and the 
+  dosing protocol.</li>
     <li>Users can specify the protocol independently from the model (e.g. be 
   able to solve a one and two compartment model for the same dosing protocol)</li>
     <li>Ability to solve for the drug quantity in each compartment over time, given a model 
@@ -366,12 +366,11 @@ and a protocol</li>
 
   <p>In the starter template, Scipy’s 
 <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_ivp.html"><code class="language-plaintext highlighter-rouge">solve_ivp</code></a> 
-is used to solve the set of ODE equations that define the PK model. Since we are using 
-linear PK, we could have used analytical solutions, but relying on an ODE solver allows 
-us to be more flexible if we wish to include non-linear models in the future. In 
-addition, you will need to be able to numerically solve ODE models for the Mathematical 
-Modelling module in weeks 6-7, so take this time to become familiar with how to use 
-<code class="language-plaintext highlighter-rouge">solve_ivp</code>.</p>
+is used to solve the set of ODEs that define the PK model. Since we are using linear PK, 
+we could have used analytical solutions, but relying on an ODE solver allows us to be 
+more flexible if we wish to include non-linear models in the future. In addition, you 
+will need to be able to numerically solve ODE models for the Mathematical Modelling 
+module in weeks 6-7, so take this time to become familiar with how to use <code class="language-plaintext highlighter-rouge">solve_ivp</code>.</p>
 </blockquote>
 
 <h2 id="structure-of-the-project-days">Structure of the project days</h2>
