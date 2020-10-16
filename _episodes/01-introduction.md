@@ -57,7 +57,7 @@ body, unlike Physiologically based pharmacokinetic, PBPK, modeling). There is ty
 a main *central* compartment into which the drug is administered and from which the drug 
 is excreted from the body, combined with zero or more *peripheral* compartments to 
 which the drug can be distributed to/from the central compartment (See Fig 2). Each 
-peripheral compartments is only connected to the central compartment.
+peripheral compartment is only connected to the central compartment.
 
 <img src="../fig/pk2.svg" alt="Fig 2" width="400"/>
 
@@ -74,7 +74,7 @@ $$
 \frac{dq_{p1}}{dt} =  Q_{p1} \left ( \frac{q_c}{V_c} - \frac{q_{p1}}{V_{p1}} \right ).
 $$
 
-This model describes an *intravenious bolus* dosing protocol, with a linear clearance 
+This model describes an *intravenous bolus* dosing protocol, with a linear clearance 
 from the central compartment (non-linear clearance processes are also possible, but not 
 considered here). The input parameters to the model are:
 - The dose function $\text{Dose}(t)$, which could consist of instantaneous doses of $X$ 
@@ -130,8 +130,8 @@ where $k_a$ [/h] is the “absorption” rate for the s.c dosing.
 > - continuous integration (e.g. Github actions) for automatic testing and documentation 
 >   generation
 > - The ability to specify the form of the PK model, including the number of peripheral 
-    compartments, the type of dosing (bolus versus intravenous), and the dosing 
-    protocol. 
+    compartments, the type of dosing (intravenous bolus versus subcutaneous), and the 
+    dosing protocol. 
 > - Users can specify the protocol independently from the model (e.g. be 
     able to solve a one and two compartment model for the same dosing protocol)
 > - Ability to solve for the drug quantity in each compartment over time, given a model 
@@ -147,12 +147,11 @@ where $k_a$ [/h] is the “absorption” rate for the s.c dosing.
 >
 > In the starter template, Scipy's 
 > [`solve_ivp`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_ivp.html) 
-is used to solve the set of ODE equations that define the PK model. Since we are using 
-linear PK, we could have used analytical solutions, but relying on an ODE solver allows 
-us to be more flexible if we wish to include non-linear models in the future. In 
-addition, you will need to be able to numerically solve ODE models for the Mathematical 
-Modelling module in weeks 6-7, so take this time to become familiar with how to use 
-`solve_ivp`.
+is used to solve the set of ODEs that define the PK model. Since we are using linear PK, 
+we could have used analytical solutions, but relying on an ODE solver allows us to be 
+more flexible if we wish to include non-linear models in the future. In addition, you 
+will need to be able to numerically solve ODE models for the Mathematical Modelling 
+module in weeks 6-7, so take this time to become familiar with how to use `solve_ivp`.
 {: .callout}
 
 ## Structure of the project days
