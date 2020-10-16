@@ -169,12 +169,12 @@ Nothing needs to be physically handed-in for this assessment other than a URL fo
 GitHub repository for each group. Your feedback and assessment for the software 
 engineering module will be based on this repository: the source code contained within, 
 the generated documentation, and the content of the issues and pull requests. The source 
-code should be conform to a consistent style throughout, and docstrings & comments 
-should be appropriate so that the code can be easily read and understood. The 
-documentation should be sufficient so that a new user could easily use the library. The 
-issues and pull requests should be sufficiently detailed so that a developer could join 
-the project half-way through and get up-to-speed on the current state of development and 
-what needs to be done.
+code should conform to a consistent style throughout, and docstrings & comments should 
+be appropriate so that the code can be easily read and understood. The documentation 
+should be sufficient so that a new user could easily use the library. The issues and 
+pull requests should be sufficiently detailed so that a developer could join the project 
+half-way through and get up-to-speed on the current state of development and what needs 
+to be done.
 
 {% include links.md %}
 
