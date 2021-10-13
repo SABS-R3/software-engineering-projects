@@ -18,13 +18,13 @@ keypoints:
 
 # Pharmokinetic Modelling
 
-The field of Pharmokinetics (PK) provides a quantitative basis for describing the 
+The field of Pharmacokinetics (PK) provides a quantitative basis for describing the 
 delivery of a drug to a patient, the diffusion of that drug through the plasma/body 
 tissue, and the subsequent clearance of the drug from the patient's system. PK is used 
 to ensure that there is sufficient concentration of the drug to maintain the required 
 efficacy of the drug, while ensuring that the concentration levels remain below the 
-toxic threshold (See Fig 1). Pharmokinetic (PK) models are often combined with 
-Pharmodynamic (PD) models, which model the positive effects of the drug, such as the 
+toxic threshold (See Fig 1). Pharmacokinetic (PK) models are often combined with 
+Pharmacodynamic (PD) models, which model the positive effects of the drug, such as the 
 binding of a drug to the biological target, and/or undesirable side effects, to form a 
 full PKPD model of the drug-body interaction. This project will only focus on PK, 
 neglecting the interaction with a PD model.
@@ -111,7 +111,7 @@ where $k_a$ [/h] is the “absorption” rate for the s.c dosing.
 > Your group project is to design and implement a python library that can specify, solve 
 > and visualise the solution of a PK model. You might find it helpful to base this on a 
 > "starter" repository which you can clone from 
-> [https://github.com/sabs-r3/2020-software-engineering-projects-pk](https://github.com/sabs-r3/2020-software-engineering-projects-pk). 
+> [https://github.com/sabs-r3/software-engineering-projects-pk](https://github.com/sabs-r3/software-engineering-projects-pk). 
 >This contains a basic Python script that constructs a two-compartment PK model with 
 >i.v. dosing, solves it using the Scipy 
 >[`solve_ivp`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_ivp.html) 
@@ -157,11 +157,12 @@ module in weeks 6-7, so take this time to become familiar with how to use `solve
 ## Structure of the project days
 
 Each project team is free to organise their interaction according to what works best for 
-the group. Each group will have a breakout room to meet virtually and to plan their 
-project. Each group should create issues on their repository corresponding to individual 
-work items, and assign these members of the group. Each group should identify a workflow 
-that they will use to add code to the repository (e.g. one branch per issue, then a pull 
-request once the work is ready to add to the main branch).
+the group. You are free to meet as a group in the DTC, and each group will be assigned a 
+student room in the building. Each group will also have a breakout room to meet 
+virtually if required. Each group should create issues on their repository corresponding 
+to individual work items, and assign these members of the group. Each group should 
+identify a workflow that they will use to add code to the repository (e.g. one branch 
+per issue, then a pull request once the work is ready to add to the main branch).
 
 ## Hand-in
 
