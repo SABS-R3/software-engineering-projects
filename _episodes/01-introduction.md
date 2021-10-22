@@ -13,7 +13,7 @@ keypoints:
 - "The groups will be identical to the SABS year-long open source software groups." 
 - "Project management will consist of (at least) daily stand-ups and the use of GitHub 
   issues and pull requests."
-- "Submit your GitHub repository for assessment by 5:30pm Friday 23rd September."
+- "Submit your GitHub repository for assessment by 5:30pm Friday 22nd October."
 ---
 
 # Pharmokinetic Modelling
